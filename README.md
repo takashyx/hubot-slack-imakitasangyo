@@ -39,6 +39,7 @@ $ cat external-scripts.json
 
 Envs
 ```bash
+export HUBOT_SLACK_TOKEN=[SLACK TOKEN. ex: "xoxp-hogehogehogehoge"]
 export HUBOT_IMAKITASANGYO_BOT_USER_ID=[Bot's user ID. ex: "U021A3SA3"]
 export HUBOT_IMAKITASANGYO_SUMMPY_API_URL=[Summpy API URL. ex: "http://127.0.0.1:9000/summarize"]
 export HUBOT_IMAKITASANGYO_SOURCE_LINES=[Number of lines to be summerized. ex: "30"]

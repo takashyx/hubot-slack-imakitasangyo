@@ -30,7 +30,7 @@ getRecentMessages = (msg, room_id) ->
 
   url = 'https://slack.com/api/channels.history'
   query = {
-    token: process.env.SLACK_TOKEN,
+    token: process.env.HUBOT_SLACK_TOKEN,
     channel: room_id,
     count: process.env.HUBOT_IMAKITASANGYO_SOURCE_LINES
   }
@@ -51,7 +51,7 @@ getChannelIDfromRoom = (msg, room) ->
     return ""
   url = 'https://slack.com/api/channels.list'
   query = {
-      token: process.env.SLACK_TOKEN
+      token: process.env.HUBOT_SLACK_TOKEN
     }
 
   getJSONResponseFromAPI_promised(msg, url, query).then (res) ->
@@ -77,7 +77,7 @@ processMessages = (msg, messages) ->
 
   url = "https://slack.com/api/users.list"
   query = {
-    token: process.env.SLACK_TOKEN
+    token: process.env.HUBOT_SLACK_TOKEN
   }
 
   getJSONResponseFromAPI_promised(msg, url, query).then (res) ->
